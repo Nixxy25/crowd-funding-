@@ -1,0 +1,130 @@
+.popup-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.pop-up-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 46, 45, 0.432);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-open{
+    display: block;
+}
+
+.pop-up-close{
+    display: none;
+}
+
+.pop-up{
+    width: 50%;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 20px;
+}
+.project-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.project-heading-text{
+    margin-bottom: 20px;
+}
+.project-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.project-container{
+    border: solid 1px #fff;
+    border-radius: 15px;
+    padding: 25px 15px;
+    background-color: green;
+}
+.project-check{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.check{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.radio-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.radio-btn input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #fcfcfc;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+      
+.radio-btn input[type="radio"]:checked {
+    background-color: #00ff62; /* Change the inside color of the checked radio button */
+}
+
+
+
+.project-span-input{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 40px;
+    gap: 20px;
+}
+
+
+.user-input{
+    text-align: center;
+}
+
+.input-page input{
+    display: flex;
+    border-radius: 15px;
+    height: 30px;
+    width: 70px;
+    outline: none;
+}
+
+.input-button button{
+    border-radius: 15px;
+    height: 30px;
+    width: 70px;
+    border: none;
+}
+
+.red{
+    border: 1px solid red;
+}
+
+.white{
+    border: none;
+}

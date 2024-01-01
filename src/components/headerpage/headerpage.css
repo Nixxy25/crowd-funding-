@@ -1,0 +1,22 @@
+.crowdfund-nav{
+    color: #ffff;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.crowdfund{
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.crowdfund-list-nav{
+    display: flex;
+    gap: 30px;
+
+}
