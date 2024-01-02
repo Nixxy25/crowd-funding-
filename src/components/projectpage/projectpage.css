@@ -47,15 +47,23 @@
 }
 .project-container{
     border: solid 1px #fff;
-    border-radius: 15px;
-    padding: 25px 15px;
-    background-color: green;
+    border-radius: 7px;
+    background-color: rgb(232, 232, 233);
+}
+.project-check-one{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 .project-check{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+   
+}
+.project-check-container{
+    padding: 25px 10px;
 }
 .check{
     display: flex;
@@ -88,9 +96,15 @@
 
 .project-span-input{
     display: flex;
+    border-top: 1px solid rgb(240, 241, 237);
     justify-content: space-between;
     margin-top: 10px;
     align-items: center;
+    padding: 25px 10px;
+}
+
+.project-check-box{
+    background-color: tan;
 }
 
 .input{

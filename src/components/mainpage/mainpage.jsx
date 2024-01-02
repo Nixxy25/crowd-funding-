@@ -33,8 +33,6 @@ const MainPage = () => {
        </div>
 
         <div className='main-info'>
-
-       
             <div>
                 <div>$89,914 </div>
                 <span className='span-info'>of $100,000 backed</span>
@@ -50,9 +48,13 @@ const MainPage = () => {
                 <span className='span-info'>days left</span>
             </div>
         </div>
-        
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
         <div>
-            <div>
+            <div className='main-text'>
                 <h3>About this project</h3>
                 <p>  The Mastercraft Bamboo Monitor Riser is a sturdy and 
                 stylish platform that elevates your screen to a more 
@@ -61,10 +63,10 @@ const MainPage = () => {
                 you more comfortable while at work, helping 
                 you stay focused on the task at hand.</p>
                 
-                <p>
+                <h4>
                 Featuring artisan craftsmanship, the simplicity of design creates extra 
                 desk space below your computer to allow notepads, pens, 
-                and USB sticks to be stored under the stand.</p>
+                and USB sticks to be stored under the stand.</h4>
             </div>
 
             <div className='about-details-container'>

@@ -3,7 +3,7 @@ import  { useState, createContext } from "react";
 export const UserContext = createContext({
    loading: false,
    updateLoading: () => {},
-   formError: null,
+
    setError: () => {},
    clearError: () => {},
    clearText: () => {},
@@ -59,7 +59,7 @@ export const UserProvider = ({children}) => {
         setCurrentReward(false);
         setTimeout(() => {
             setThankyou(true);
-        }, 4000);
+        }, 1000);
       
     }
 

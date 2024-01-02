@@ -13,33 +13,34 @@ const ProjectPage = () => {
         textform,
         count,
         updateCount,
-        loading,
         setError,
         clearError,
         clearText,
         formError,
-        updateLoading,
     } = useContext(UserContext);
 
     const displayedText = '25';
     console.log(textform);
 
-    const handleButtonClick = () => {
     
+    const handleButtonClick = () => {
+        if(Number(textform) > Number(displayedText)) {
+            openThankyou();
+            updateCount();
+            toggleCheck();
+            clearText();
+        }else{
+            setError("error");
+        }
     }
+
+   
 
     const handleChange = (event) => {
         const {value} = event.target;
-        // const onlyNumbers = value.replace(/[^0-9]/g, '');
-        updateText(value);
-
-
-        if(Number(value) < Number(displayedText)) {
-            setError('Error');
-
-        }else{
-            clearError();
-        };
+        const onlyNumbers = value.replace(/[^0-9]/g, '');
+        updateText(onlyNumbers);
+        clearError();
     }
 
 
@@ -49,18 +50,6 @@ const ProjectPage = () => {
 
     const handleCheck = () => {
         toggleCheck();
-    }
-
-    const handleOpen = () => {
-        openThankyou();
-        updateCount();
-        updateLoading(true);
-
-        setTimeout(() => {
-            updateLoading(false);
-        }, 1000);
-        toggleCheck();
-        clearText();
     }
   return (
     <div className= {`pop-up-container ${currentReward ? 'pop-up-open' : 'pop-up-close'}`}>
@@ -78,74 +67,234 @@ const ProjectPage = () => {
 
         <div className='project-box'>
             <div className='project-container'>
+            <div className='project-check-container'>
                 <div className='project-check-one'>
-                    <input type='checkbox'></input>
+                    <div className='radio-btn'>
+                        <input type='radio' checked={isChecked} onClick={handleCheck}></input>
+                    </div>
+                    
                     <span>Pledge with no reward</span>
                 </div>
 
                 <div>
                     Choose to support without a reward if you simply believe in our project.As a 
-                    backer, you will be signed up to recieve product updates via email.
+                    backer,you will be signed up to recieve product updates via email.
                 </div>
+
+                <div>
+                {isChecked && (
+                    <div className='project-span-input'>
+                        <div>Enter your pledge</div>
+
+                        <div className='input'>
+                            <div className='input-page'>
+                                <input className="user-input"
+                                type='text' 
+                                onChange={handleChange}
+                                value={textform}
+                                name={textform}
+                                ></input>
+
+                            </div>
+                            
+                            
+                            <div className='input-button'>
+                                <button type='button' onClick={handleButtonClick}>Price</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    )
+                }
+                
+            </div>
+            </div>
+  
             </div>
 
             <div className='project-container'>
+            <div className='project-check-box'>
+
+                <div>
                 <div className='project-check-container'>
                     <div className='project-check'>
                         <div className='check'>
+
                             <div className='radio-btn'>
                                 <input type='radio'  checked={isChecked} onClick={handleCheck}></input>
                                 <div>Bamboo Stand</div>
                             </div> 
-                           
+                
                             <div>Plede 25 or more</div>
                         </div>
 
                         <div className='project-count'>{count} <span>left</span></div>
                     </div> 
-
-                    <div>
-                    You get an ergonomic stand made of natural bamboo. 
+                    
+                    <div>You get an ergonomic stand made of natural bamboo. 
                     You've helped us launch our promotional campaign,
                     and you'll be added to a special Backer member list.
                     </div>
+                </div>
 
-                   
+
                 <div>
                     {isChecked && (
                         <div className='project-span-input'>
                             <div>Enter your pledge</div>
 
                             <div className='input'>
+                                <div className='input-page'>
+                                    <input className={`user-input ${formError ? "red" : "white"}`}
+                                    type='text' 
+                                    onChange={handleChange}
+                                    value={textform}
+                                    name={textform}
+                                    ></input>
+
+                                </div>
+                                
+                                
+                                <div className='input-button'>
+                                    <button type='button' onClick={handleButtonClick}>Price</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        )
+                    }
+                    
+                </div>
+                </div>
+            </div>
+
+    
+        </div>
+        
+
+        <div className='project-container'>
+        <div className='project-check-box'>
+
+            <div>
+            <div className='project-check-container'>
+                <div className='project-check'>
+                    <div className='check'>
+
+                        <div className='radio-btn'>
+                            <input type='radio'  checked={isChecked} onClick={handleCheck}></input>
+                            <div>Bamboo Stand</div>
+                        </div> 
+            
+                        <div>Plede 25 or more</div>
+                    </div>
+
+                    <div className='project-count'>{count} <span>left</span></div>
+                </div> 
+                
+                <div>You get an ergonomic stand made of natural bamboo. 
+                You've helped us launch our promotional campaign,
+                and you'll be added to a special Backer member list.
+                </div>
+            </div>
+
+
+            <div>
+                {isChecked && (
+                    <div className='project-span-input'>
+                        <div>Enter your pledge</div>
+
+                        <div className='input'>
                             <div className='input-page'>
-                                <input 
-                                className={`user-input ${formError ? "red" : "white"}`}
-                                placeholder=""
+                                <input className={`user-input ${formError ? "red" : "white"}`}
                                 type='text' 
                                 onChange={handleChange}
                                 value={textform}
                                 name={textform}
                                 ></input>
-                                {formError && <div style={{
-                                    color: "red"
-                                }}>{formError}</div>}
+
                             </div>
-                               
-                                
-                              <div className='input-button'>
-                              <button type='button' onClick={handleOpen}>Price</button>
-                              </div>
-                                
+                            
+                            
+                            <div className='input-button'>
+                                <button type='button' onClick={handleButtonClick}>Price</button>
                             </div>
+                            
                         </div>
-                         
-                        )
-                    }
-                     
+                    </div>
+                    
+                    )
+                }
+                
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+    <div className='project-container'>
+    <div className='project-check-box'>
+
+ 
+        <div className='project-check-container'>
+            <div className='project-check'>
+                <div className='check'>
+
+                    <div className='radio-btn'>
+                        <input type='radio'  checked={isChecked} onClick={handleCheck}></input>
+                        <div>Bamboo Stand</div>
+                    </div> 
+        
+                    <div>Plede 25 or more</div>
+                </div>
+
+                <div className='project-count'>{count} <span>left</span></div>
+            </div> 
+            
+            <div>You get an ergonomic stand made of natural bamboo. 
+            You've helped us launch our promotional campaign,
+            and you'll be added to a special Backer member list.
+            </div>
+        </div>
+
+
+        <div>
+            {isChecked && (
+                <div className='project-span-input'>
+                    <div>Enter your pledge</div>
+
+                    <div className='input'>
+                        <div className='input-page'>
+                            <input className={`user-input ${formError ? "red" : "white"}`}
+                            type='text' 
+                            onChange={handleChange}
+                            value={textform}
+                            name={textform}
+                            ></input>
+
+                        </div>
+                        
+                        
+                        <div className='input-button'>
+                            <button type='button' onClick={handleButtonClick}>Price</button>
+                        </div>
+                        
                     </div>
                 </div>
-            </div>
+                
+                )
+            }
             
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
 
 
 
@@ -154,7 +303,7 @@ const ProjectPage = () => {
         </div>
         </div>
         </div>
-    </div>
+
   )
 }
 
