@@ -3,18 +3,22 @@ import { useContext } from 'react';
 import { UserContext } from '../../context/user-context';
 
 const MainPage = () => {
-    const {openPopup, count, loading} = useContext(UserContext);
+    const {openPopup, count, currentReward} = useContext(UserContext);
 
     const handleOpen = () => {
         openPopup();
     }
 
-  return (
-    <div className='container'>
-    <div className='main-container'>
+  return (   
+    <div className={`container ${handleOpen ? "scroll" : "no-scroll"}`}>
             <div className='main-logo'>
-                <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#000" cx="28" cy="28" r="28"/><g fill-rule="nonzero"><path d="M15.565 28.565a1.93 1.93 0 012.606-.113l.122.113 10.142 10.142a1.93 1.93 0 01-2.606 2.84l-.122-.112-10.142-10.142a1.93 1.93 0 010-2.728z" fill="#444"/><path d="M36.19 17.48c1.006-.996 2.706-.34 2.805 1.026l.005.126v10.736c0 .9-.737 1.629-1.646 1.629a1.64 1.64 0 01-1.642-1.507l-.005-.122v-6.805l-8.043 7.957c-1.006.996-2.707.34-2.806-1.026l-.004-.126v-6.805L16.81 30.52a1.66 1.66 0 01-2.224.095l-.105-.095a1.616 1.616 0 01-.096-2.2l.096-.103L25.336 17.48c1.006-.996 2.707-.34 2.806 1.026l.004.126v6.804l8.043-7.956z" fill="#FFF"/></g></g></svg>
-            </div>
+    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#000" cx="28" cy="28" r="28"/><g fill-rule="nonzero"><path d="M15.565 28.565a1.93 1.93 0 012.606-.113l.122.113 10.142 10.142a1.93 1.93 0 01-2.606 2.84l-.122-.112-10.142-10.142a1.93 1.93 0 010-2.728z" fill="#444"/><path d="M36.19 17.48c1.006-.996 2.706-.34 2.805 1.026l.005.126v10.736c0 .9-.737 1.629-1.646 1.629a1.64 1.64 0 01-1.642-1.507l-.005-.122v-6.805l-8.043 7.957c-1.006.996-2.707.34-2.806-1.026l-.004-.126v-6.805L16.81 30.52a1.66 1.66 0 01-2.224.095l-.105-.095a1.616 1.616 0 01-.096-2.2l.096-.103L25.336 17.48c1.006-.996 2.707-.34 2.806 1.026l.004.126v6.804l8.043-7.956z" fill="#FFF"/></g></g></svg>
+    </div>
+
+    <div className='main-container'>
+        <div className='first-main-container'>
+
+          
             <div className='main-context'>
            <div className='main-text1'>Mastercraft Bamboo Monitor Riser</div>
            <div className='main-text2'>A beautifully handcrafted monitor stand to reduce neck and eye strain.</div>
@@ -31,19 +35,21 @@ const MainPage = () => {
         <span>Bookmark</span> 
         </button></div>
        </div>
+       </div>
 
+       <div className='second-main-container'>
         <div className='main-info'>
-            <div>
-                <div>$89,914 </div>
+            <div className='main-info-numbers'>
+                <div className='main-numbers'>$89,914 </div>
                 <span className='span-info'>of $100,000 backed</span>
             </div>
 
-            <div>
+            <div className='main-info-numbers-right'>
                 <div>5,007</div>
                 <span className='span-info'>total backers</span>
             </div>
 
-            <div>
+            <div className='main-info-numbers'>
                 <div>56</div>
                 <span className='span-info'>days left</span>
             </div>
@@ -53,7 +59,11 @@ const MainPage = () => {
             <div class="progress"></div>
         </div>
 
-        <div>
+        </div>
+
+        
+
+        <div className='third-main-container'>
             <div className='main-text'>
                 <h3>About this project</h3>
                 <p>  The Mastercraft Bamboo Monitor Riser is a sturdy and 
@@ -73,7 +83,7 @@ const MainPage = () => {
                 <div className='details-container'>
                     <div className='details'>
                         <h3>Bamboo Stand</h3>
-                        <h3>Pledge 25$ or more</h3>
+                        <h3 className='pledge'>Pledge 25$ or more</h3>
                     </div>
 
                     <div className='details-info'>
@@ -92,7 +102,7 @@ const MainPage = () => {
                 <div className='details-container'>
                     <div className='details'>
                         <h3>Black Edition Stand</h3>
-                        <h3>Pledge 75$ or more</h3>
+                        <h3 className='pledge'>Pledge 75$ or more</h3>
                     </div>
 
                     <div className='details-info'>
@@ -109,7 +119,7 @@ const MainPage = () => {
                 <div className='details-container'>       
                     <div className='details'>
                         <h3>Mahogany Special Edition</h3>
-                        <h3>Pledge 200$ or more</h3>
+                        <h3 className='pledge'>Pledge 200$ or more</h3>
                     </div>
 
                     <div className='details-info'>

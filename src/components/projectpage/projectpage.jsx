@@ -52,7 +52,10 @@ const ProjectPage = () => {
         toggleCheck();
     }
   return (
-    <div className= {`pop-up-container ${currentReward ? 'pop-up-open' : 'pop-up-close'}`}>
+    <div>
+    {
+        currentReward && (
+            <div className= "pop-up-container">
     <div className='popup-body'>    
     <div className='pop-up'>
         <div className='project-heading-container'>
@@ -303,7 +306,10 @@ const ProjectPage = () => {
         </div>
         </div>
         </div>
-
+        )
+    }
+    
+    </div>
   )
 }
 

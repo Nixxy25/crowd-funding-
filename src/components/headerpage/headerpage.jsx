@@ -6,7 +6,6 @@ const HeaderPage = () => {
         <div style={{
             backgroundImage: `url(${image})`,
             height: '300px',
-
             backgroundRepeat: 'no repeat',
         
         }}>

@@ -17,7 +17,7 @@
     align-items: center;
 }
 .thankyou-page{
-    background-color: green;
+    background-color: #fff;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -31,4 +31,6 @@
     padding: 15px 20px;
     border-radius: 20px;
     border: none;
+    background-color: #3cb4ab;
+    color: #fff;
 }
