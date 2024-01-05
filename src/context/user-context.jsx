@@ -3,10 +3,13 @@ import  { useState, createContext } from "react";
 export const UserContext = createContext({
    loading: false,
    updateLoading: () => {},
-
+   bookmark: false,
+   setBookmarked: () => {},
    setError: () => {},
    clearError: () => {},
    clearText: () => {},
+   bookmarkedText: "hello",
+   changeText: () => {},
 });
 
 export const UserProvider = ({children}) => {
@@ -17,7 +20,19 @@ export const UserProvider = ({children}) => {
     const [formError, setFormError] = useState('');
     const [count, setCount] = useState(64);
     const [loading, setLoading] = useState(false);
+    const [bookmark, setBookmark] = useState(false);
+    const [bookmarkedText, setBookmarkedText] = useState('Bookmark')
 
+    const changeText = () =>{
+        if (bookmarkedText === "Bookmark"){
+            setBookmarkedText("Bookmarked");
+            } else{
+            setBookmarkedText("Bookmark");
+        }
+    }
+    const setBookmarked = () => {
+        setBookmark((prevBook) => !prevBook);
+    }
     const setError = (message) => {
         setFormError(message);
     }
@@ -86,6 +101,10 @@ export const UserProvider = ({children}) => {
         setError,
         clearError,
         clearText,
+        bookmark,
+        setBookmarked,
+        changeText,
+        bookmarkedText,
     }
     return(
         <UserContext.Provider value={value}>{children}</UserContext.Provider>

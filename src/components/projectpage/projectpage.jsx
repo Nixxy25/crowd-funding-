@@ -187,10 +187,10 @@ const ProjectPage = () => {
 
                         <div className='radio-btn'>
                             <input type='radio'  checked={isChecked} onClick={handleCheck}></input>
-                            <div>Bamboo Stand</div>
+                            <div>Black Edition Stand</div>
                         </div> 
             
-                        <div>Plede 25 or more</div>
+                        <div>Plede $75 or more</div>
                     </div>
 
                     <div className='project-count'>{count} <span>left</span></div>
@@ -248,18 +248,17 @@ const ProjectPage = () => {
 
                     <div className='radio-btn'>
                         <input type='radio'  checked={isChecked} onClick={handleCheck}></input>
-                        <div>Bamboo Stand</div>
+                        <div>Mahogany Special Editon</div>
                     </div> 
         
-                    <div>Plede 25 or more</div>
+                    <div>Plede $200 or more</div>
                 </div>
 
                 <div className='project-count'>{count} <span>left</span></div>
             </div> 
             
-            <div>You get an ergonomic stand made of natural bamboo. 
-            You've helped us launch our promotional campaign,
-            and you'll be added to a special Backer member list.
+            <div>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be 
+              added to Our Backer member list. Shipping is included.
             </div>
         </div>
 
@@ -315,41 +314,4 @@ const ProjectPage = () => {
 
 export default ProjectPage;
 
-// <div>
-// <div>
-//     <div>
-//         <input type='checkbox'></input>
-//         <p>Black Edition Stand</p>
-//         <p>Pledge $75 or more</p>
-//     </div>
 
-//     <div>64<span>left</span></div>
-// </div>
-
-
-
-// <div>
-// You get an ergonomic stand made of natural bamboo. 
-// You've helped us launch our promotional campaign,
-// and you'll be added to a special Backer member list.
-// </div>
-// </div>
-
-// <div>
-// <div>
-//     <div>
-//         <input type='checkbox'></input>
-//         <p>Mahogany Special Edition</p>
-//         <p>Pledge $200 or more</p>
-//     </div>
-
-//     <div>101 <span>left</span></div>
-// </div>
-
-// <div>
-// You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be 
-// added to Our Backer member list. Shipping is included.
-// </div>
-
-
-// </div>

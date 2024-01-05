@@ -88,6 +88,10 @@
     background-color: #3cb4ab;
     color: #fff;
 }
+.bookmark-true{
+    background-color: #3cb4ac2a;
+    color: #3cb4ab;
+}
 .btn2{
     display: flex;
     align-items: center;
@@ -95,6 +99,10 @@
 .btn2 svg{
  position: relative;
  left: 20%;
+}
+.svg-btn-true{
+    fill: #3cb4ab;
+    color: #28ca28;
 }
 .btn2 button{
     padding: 20px 40px;
@@ -104,6 +112,7 @@
 }
 .btn2 span{
     padding-left: 10px;
+    font-weight: 600;
 }
 .main-info{
     display: flex;

@@ -3,10 +3,18 @@ import { useContext } from 'react';
 import { UserContext } from '../../context/user-context';
 
 const MainPage = () => {
-    const {openPopup, count, currentReward} = useContext(UserContext);
+    // const [bookmarkText, setBookmarkText] = useState('Bookmark');
+    const {openPopup, count, bookmark, setBookmarked, bookmarkedText, changeText} = useContext(UserContext);
+    
 
     const handleOpen = () => {
         openPopup();
+    }
+
+    const handleBookmark = () => {
+        // 
+        setBookmarked();
+        changeText();
     }
 
   return (   
@@ -29,11 +37,11 @@ const MainPage = () => {
         <div ><button className='btn1' type='button' >Back this project</button></div>
         
         <div className='btn2'>
-        <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
-        
-        <button  type='button'>
-        <span>Bookmark</span> 
-        </button></div>
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle className={`${bookmark ? "svg-btn-true" : "svg-btn-false"}`} onClick={handleBookmark} fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#fff" d="M23 19v18l5-5.058L33 37V19z"/></g></svg> 
+        <button className={`${bookmark ? "bookmark-true" : "bookmark-false"}`}  onClick={handleBookmark} type='button'>
+            <span className='span-btn2'>{bookmarkedText}</span> 
+        </button> </div>
+
        </div>
        </div>
 
@@ -111,8 +119,8 @@ const MainPage = () => {
                     </div>
 
                     <div className='details-price'>
-                        <div className='price'>64 <span>left</span></div>
-                        <button type='button'>Select Reward</button>
+                        <div className='price'>{count} <span>left</span></div>
+                        <button onClick={handleOpen} type='button'>Select Reward</button>
                     </div>
                 </div>
 
@@ -128,8 +136,8 @@ const MainPage = () => {
                     </div>
 
                     <div className='details-price'>
-                        <div className='price'>0 <span>left</span></div>
-                        <button>Select Reward</button>
+                        <div className='price'>{count} <span>left</span></div>
+                        <button onClick={handleOpen} type='button'>Select Reward</button>
                     </div>
 
 
