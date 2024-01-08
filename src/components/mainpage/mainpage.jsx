@@ -4,7 +4,9 @@ import { UserContext } from '../../context/user-context';
 
 const MainPage = () => {
     // const [bookmarkText, setBookmarkText] = useState('Bookmark');
-    const {openPopup, count, bookmark, setBookmarked, bookmarkedText, changeText} = useContext(UserContext);
+    const {openPopup, count, bookmark, 
+        setBookmarked, bookmarkedText, 
+        changeText, fundsNumber} = useContext(UserContext);
     
 
     const handleOpen = () => {
@@ -48,7 +50,7 @@ const MainPage = () => {
        <div className='second-main-container'>
         <div className='main-info'>
             <div className='main-info-numbers'>
-                <div className='main-numbers'>$89,914 </div>
+                <div className='main-numbers'>{fundsNumber} </div>
                 <span className='span-info'>of $100,000 backed</span>
             </div>
 

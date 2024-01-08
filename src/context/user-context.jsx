@@ -10,17 +10,20 @@ export const UserContext = createContext({
    clearText: () => {},
    bookmarkedText: "hello",
    changeText: () => {},
+   fundsNumber: "89,914",
+   updateFunds: () => {},
 });
 
 export const UserProvider = ({children}) => {
     const [currentReward, setCurrentReward] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [thankyou, setThankyou] = useState(false);
-    const [textform, setTextForm] = useState('');
-    const [formError, setFormError] = useState('');
+    const [textform, setTextForm] = useState("");
+    const [formError, setFormError] = useState("");
     const [count, setCount] = useState(64);
     const [loading, setLoading] = useState(false);
     const [bookmark, setBookmark] = useState(false);
+    const [fundsNumber, setFundsNumber] = useState("89914");
     const [bookmarkedText, setBookmarkedText] = useState('Bookmark')
 
     const changeText = () =>{
@@ -30,6 +33,8 @@ export const UserProvider = ({children}) => {
             setBookmarkedText("Bookmark");
         }
     }
+
+    
     const setBookmarked = () => {
         setBookmark((prevBook) => !prevBook);
     }
@@ -50,8 +55,8 @@ export const UserProvider = ({children}) => {
 
 
 
-    const updateText = (userText) => {
-        setTextForm(userText);
+    const updateText = (userText, value) => {
+        setTextForm({...textform, [userText]: value});
     }
 
     const clearText = () => {
@@ -105,6 +110,9 @@ export const UserProvider = ({children}) => {
         setBookmarked,
         changeText,
         bookmarkedText,
+        fundsNumber,
+        setFundsNumber,
+
     }
     return(
         <UserContext.Provider value={value}>{children}</UserContext.Provider>

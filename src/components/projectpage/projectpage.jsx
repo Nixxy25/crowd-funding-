@@ -1,48 +1,53 @@
-import  { useContext} from 'react'
+import  { useContext, useState} from 'react'
 import { UserContext } from '../../context/user-context';
 import './projectpage.css';
 
 const ProjectPage = () => {
+    const [fundsNumber, setFundsNumber] = useState(89,914);
+    const [backersNumber, setBackersNumber] = useState(5007);
     const {
-        currentReward, 
-        isChecked, 
-        toggleCheck, 
-        closePopup, 
-        openThankyou,
-        updateText,
-        textform,
-        count,
+        currentReward, isChecked, 
+        toggleCheck, closePopup, 
+        openThankyou,updateText,
+        textform,count,
         updateCount,
         setError,
         clearError,
         clearText,
         formError,
+        userText,
+        setUserText,
+        updateFunds,
     } = useContext(UserContext);
 
-    const displayedText = '25';
-    console.log(textform);
+    // const displayedText = '25';
+    // console.log(textform);
 
     
-    const handleButtonClick = () => {
-        if(Number(textform) > Number(displayedText)) {
-            openThankyou();
-            updateCount();
-            toggleCheck();
-            clearText();
-        }else{
-            setError("error");
-        }
+    const handleButtonClick = (event) => {
+        event.preventDefault();
+        // if(Number(userText) > Number(textform.number1)) {
+        //     openThankyou();
+        //     updateCount();
+        //     toggleCheck();
+        //     clearText();
+        // }else{
+        //     setError("error");
+        // }
+        alert();
     }
 
    
 
-    const handleChange = (event) => {
+    const handleChange = (event, userText) => {
         const {value} = event.target;
-        const onlyNumbers = value.replace(/[^0-9]/g, '');
-        updateText(onlyNumbers);
+        // const onlyNumbers = value.replace(/[^0-9]/g, '');
+        updateText(userText, value);
+        console.log(value)
         clearError();
-    }
 
+    }
+    
 
     const handleClose = () => {
         closePopup();
@@ -76,7 +81,7 @@ const ProjectPage = () => {
                         <input type='radio' checked={isChecked} onClick={handleCheck}></input>
                     </div>
                     
-                    <span>Pledge with no reward</span>
+                    <span>Pledge with no reward {textform.number1} </span>
                 </div>
 
                 <div>
@@ -87,14 +92,14 @@ const ProjectPage = () => {
                 <div>
                 {isChecked && (
                     <div className='project-span-input'>
-                        <div>Enter your pledge</div>
+                        <div>Enter your pledge </div>
 
                         <div className='input'>
                             <div className='input-page'>
                                 <input className="user-input"
                                 type='text' 
                                 onChange={handleChange}
-                                value={textform}
+                              
                                 name={textform}
                                 ></input>
 
@@ -102,7 +107,7 @@ const ProjectPage = () => {
                             
                             
                             <div className='input-button'>
-                                <button type='button' onClick={handleButtonClick}>Price</button>
+                                <button type='button' onClick={ handleButtonClick}>Price</button>
                             </div>
                             
                         </div>
