@@ -6,7 +6,7 @@ const MainPage = () => {
     // const [bookmarkText, setBookmarkText] = useState('Bookmark');
     const {openPopup, count, bookmark, 
         setBookmarked, bookmarkedText, 
-        changeText, fundsNumber} = useContext(UserContext);
+        changeText, fundsNumber, backers} = useContext(UserContext);
     
 
     const handleOpen = () => {
@@ -55,7 +55,7 @@ const MainPage = () => {
             </div>
 
             <div className='main-info-numbers-right'>
-                <div>5,007</div>
+                <div>{backers}</div>
                 <span className='span-info'>total backers</span>
             </div>
 

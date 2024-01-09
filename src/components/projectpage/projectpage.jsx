@@ -3,13 +3,11 @@ import { UserContext } from '../../context/user-context';
 import './projectpage.css';
 
 const ProjectPage = () => {
-    const [fundsNumber, setFundsNumber] = useState(89,914);
-    const [backersNumber, setBackersNumber] = useState(5007);
     const {
         currentReward, isChecked, 
         toggleCheck, closePopup, 
         openThankyou,updateText,
-        textform,count,
+        textForm,count,
         updateCount,
         setError,
         clearError,
@@ -18,31 +16,36 @@ const ProjectPage = () => {
         userText,
         setUserText,
         updateFunds,
+        setTextForm,
+        addNumber,
+        updateBackers,
+        
     } = useContext(UserContext);
 
-    // const displayedText = '25';
-    // console.log(textform);
-
-    
-    const handleButtonClick = (event) => {
-        event.preventDefault();
-        // if(Number(userText) > Number(textform.number1)) {
-        //     openThankyou();
-        //     updateCount();
-        //     toggleCheck();
-        //     clearText();
-        // }else{
-        //     setError("error");
-        // }
-        alert();
-    }
+    const displayedText = '25';
+    const handleButtonClick = () => {
+     
+        const number = parseFloat(textForm);
+       
+        if(Number(textForm) > displayedText) {
+            addNumber(number)
+            updateBackers();
+            updateText('')
+            openThankyou();
+            updateCount();
+            toggleCheck();
+            clearText();
+        }else{
+            setError("error");
+        }
+    };
 
    
 
-    const handleChange = (event, userText) => {
-        const {value} = event.target;
+    const handleChange = (event) => {
+        
         // const onlyNumbers = value.replace(/[^0-9]/g, '');
-        updateText(userText, value);
+        updateText(event.target.value);
         console.log(value)
         clearError();
 
@@ -81,7 +84,7 @@ const ProjectPage = () => {
                         <input type='radio' checked={isChecked} onClick={handleCheck}></input>
                     </div>
                     
-                    <span>Pledge with no reward {textform.number1} </span>
+                    <span>Pledge with no reward {textForm.number1} </span>
                 </div>
 
                 <div>
@@ -99,15 +102,16 @@ const ProjectPage = () => {
                                 <input className="user-input"
                                 type='text' 
                                 onChange={handleChange}
-                              
-                                name={textform}
+                                value={textForm}
+                                name={textForm}
+                                
                                 ></input>
 
                             </div>
                             
                             
                             <div className='input-button'>
-                                <button type='button' onClick={ handleButtonClick}>Price</button>
+                                <button type='button' onClick={handleButtonClick}>Price</button>
                             </div>
                             
                         </div>
@@ -157,8 +161,8 @@ const ProjectPage = () => {
                                     <input className={`user-input ${formError ? "red" : "white"}`}
                                     type='text' 
                                     onChange={handleChange}
-                                    value={textform}
-                                    name={textform}
+                                    
+                                    name={textForm}
                                     ></input>
 
                                 </div>
@@ -218,8 +222,8 @@ const ProjectPage = () => {
                                 <input className={`user-input ${formError ? "red" : "white"}`}
                                 type='text' 
                                 onChange={handleChange}
-                                value={textform}
-                                name={textform}
+                                
+                                name={textForm}
                                 ></input>
 
                             </div>
@@ -278,8 +282,8 @@ const ProjectPage = () => {
                             <input className={`user-input ${formError ? "red" : "white"}`}
                             type='text' 
                             onChange={handleChange}
-                            value={textform}
-                            name={textform}
+                          
+                            name={textForm}
                             ></input>
 
                         </div>

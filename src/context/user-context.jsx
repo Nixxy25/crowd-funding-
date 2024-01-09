@@ -12,18 +12,20 @@ export const UserContext = createContext({
    changeText: () => {},
    fundsNumber: "89,914",
    updateFunds: () => {},
+   addNumber: () => {},
 });
 
 export const UserProvider = ({children}) => {
     const [currentReward, setCurrentReward] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [thankyou, setThankyou] = useState(false);
-    const [textform, setTextForm] = useState("");
+    const [textForm, setTextForm] = useState("");
     const [formError, setFormError] = useState("");
     const [count, setCount] = useState(64);
     const [loading, setLoading] = useState(false);
     const [bookmark, setBookmark] = useState(false);
-    const [fundsNumber, setFundsNumber] = useState("89914");
+    const [fundsNumber, setFundsNumber] = useState(89914);
+    const [backers, setBackers] = useState(5007);
     const [bookmarkedText, setBookmarkedText] = useState('Bookmark')
 
     const changeText = () =>{
@@ -34,6 +36,17 @@ export const UserProvider = ({children}) => {
         }
     }
 
+    const updateBackers = () => {
+        setBackers(prevBackers => prevBackers + 1)
+    }
+
+    const addNumber = (number) => {
+        setFundsNumber(fundsNumber + number);
+    }
+
+    const updateText = (input) => {
+        setTextForm(input)
+    }
     
     const setBookmarked = () => {
         setBookmark((prevBook) => !prevBook);
@@ -55,9 +68,7 @@ export const UserProvider = ({children}) => {
 
 
 
-    const updateText = (userText, value) => {
-        setTextForm({...textform, [userText]: value});
-    }
+   
 
     const clearText = () => {
         setTextForm('');
@@ -97,7 +108,7 @@ export const UserProvider = ({children}) => {
         closeThankyou,
         thankyou,
         updateText,
-        textform,
+        textForm,
         formError,
         count,
         updateCount,
@@ -112,6 +123,10 @@ export const UserProvider = ({children}) => {
         bookmarkedText,
         fundsNumber,
         setFundsNumber,
+        setTextForm,
+        addNumber,
+        updateBackers,
+        backers,
 
     }
     return(
