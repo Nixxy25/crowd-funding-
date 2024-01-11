@@ -19,7 +19,12 @@ export const UserProvider = ({children}) => {
     const [currentReward, setCurrentReward] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [thankyou, setThankyou] = useState(false);
-    const [textForm, setTextForm] = useState("");
+    const [textForm, setTextForm] = useState({
+        field1: '',
+        field2: '',
+        field3:'',
+        field4:'',
+    });
     const [formError, setFormError] = useState("");
     const [count, setCount] = useState(64);
     const [loading, setLoading] = useState(false);
@@ -44,9 +49,7 @@ export const UserProvider = ({children}) => {
         setFundsNumber(fundsNumber + number);
     }
 
-    const updateText = (input) => {
-        setTextForm(input)
-    }
+   
     
     const setBookmarked = () => {
         setBookmark((prevBook) => !prevBook);
@@ -107,8 +110,9 @@ export const UserProvider = ({children}) => {
         openThankyou,
         closeThankyou,
         thankyou,
-        updateText,
+   
         textForm,
+        setTextForm,
         formError,
         count,
         updateCount,
@@ -123,7 +127,7 @@ export const UserProvider = ({children}) => {
         bookmarkedText,
         fundsNumber,
         setFundsNumber,
-        setTextForm,
+     
         addNumber,
         updateBackers,
         backers,

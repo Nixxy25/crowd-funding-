@@ -7,7 +7,7 @@ const ProjectPage = () => {
         currentReward, isChecked, 
         toggleCheck, closePopup, 
         openThankyou,updateText,
-        textForm,count,
+       count,
         updateCount,
         setError,
         clearError,
@@ -17,11 +17,13 @@ const ProjectPage = () => {
         setUserText,
         updateFunds,
         setTextForm,
+        textForm,
         addNumber,
         updateBackers,
         
     } = useContext(UserContext);
-
+    
+   
     const displayedText = '25';
     const handleButtonClick = () => {
      
@@ -45,9 +47,13 @@ const ProjectPage = () => {
     const handleChange = (event) => {
         
         // const onlyNumbers = value.replace(/[^0-9]/g, '');
-        updateText(event.target.value);
-        console.log(value)
-        clearError();
+        // updateText(event.target.value);
+        setTextForm({
+            ...textForm,
+            [event.target.name]: event.target.value,
+        });
+        // console.log(value)
+        // clearError();
 
     }
     
@@ -84,7 +90,7 @@ const ProjectPage = () => {
                         <input type='radio' checked={isChecked} onClick={handleCheck}></input>
                     </div>
                     
-                    <span>Pledge with no reward {textForm.number1} </span>
+                    <span>Pledge with no reward  </span>
                 </div>
 
                 <div>
@@ -100,10 +106,11 @@ const ProjectPage = () => {
                         <div className='input'>
                             <div className='input-page'>
                                 <input className="user-input"
+                                id='field1'
                                 type='text' 
                                 onChange={handleChange}
-                                value={textForm}
-                                name={textForm}
+                                value={textForm.field1}
+                                name="field1"
                                 
                                 ></input>
 
@@ -161,8 +168,8 @@ const ProjectPage = () => {
                                     <input className={`user-input ${formError ? "red" : "white"}`}
                                     type='text' 
                                     onChange={handleChange}
-                                    
-                                    name={textForm}
+                                    value={textForm.field2}
+                                    name="field2"
                                     ></input>
 
                                 </div>
@@ -222,8 +229,8 @@ const ProjectPage = () => {
                                 <input className={`user-input ${formError ? "red" : "white"}`}
                                 type='text' 
                                 onChange={handleChange}
-                                
-                                name={textForm}
+                                value={textForm.field3}
+                                name="field3"
                                 ></input>
 
                             </div>
@@ -282,8 +289,8 @@ const ProjectPage = () => {
                             <input className={`user-input ${formError ? "red" : "white"}`}
                             type='text' 
                             onChange={handleChange}
-                          
-                            name={textForm}
+                            value={textForm.field4}
+                            name="field4"
                             ></input>
 
                         </div>
