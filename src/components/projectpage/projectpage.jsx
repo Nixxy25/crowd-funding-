@@ -25,14 +25,14 @@ const ProjectPage = () => {
     
    
     const displayedText = '25';
+
     const handleButtonClick = () => {
      
         const number = parseFloat(textForm);
        
-        if(Number(textForm) > displayedText) {
+        if(Number(textForm.field1) > displayedText) {
             addNumber(number)
             updateBackers();
-            updateText('')
             openThankyou();
             updateCount();
             toggleCheck();
@@ -76,7 +76,7 @@ const ProjectPage = () => {
             <div className='project-heading'>
                 <div>Back this project</div>
                 <div onClick={handleClose}>
-                    <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
+                    <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="blackr" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
                 </div>
             </div>
             <div className='project-heading-text'>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</div>
@@ -170,6 +170,7 @@ const ProjectPage = () => {
                                     onChange={handleChange}
                                     value={textForm.field2}
                                     name="field2"
+                                    id='field2'
                                     ></input>
 
                                 </div>
@@ -231,6 +232,7 @@ const ProjectPage = () => {
                                 onChange={handleChange}
                                 value={textForm.field3}
                                 name="field3"
+                                id='field3'
                                 ></input>
 
                             </div>
@@ -291,6 +293,7 @@ const ProjectPage = () => {
                             onChange={handleChange}
                             value={textForm.field4}
                             name="field4"
+                            id='field4'
                             ></input>
 
                         </div>
