@@ -26,10 +26,8 @@ const ProjectPage = () => {
    
     const displayedText = '25';
 
-    const handleButtonClick = () => {
-     
+    const handleButtonClick = () => {     
         const number = parseFloat(textForm);
-       
         if(Number(textForm.field1) > displayedText) {
             addNumber(number)
             updateBackers();
@@ -65,7 +63,8 @@ const ProjectPage = () => {
     const handleCheck = () => {
         toggleCheck();
     }
-  return (
+
+    return (
     <div>
     {
         currentReward && (
@@ -87,7 +86,13 @@ const ProjectPage = () => {
             <div className='project-check-container'>
                 <div className='project-check-one'>
                     <div className='radio-btn'>
-                        <input type='radio' checked={isChecked} onClick={handleCheck}></input>
+                        <input 
+                        type='radio' 
+                        id="radio1"
+                        name="check"
+                        value="radio1"
+                        checked={isChecked === "radio1"} 
+                        onChange={() => toggleCheck('radio1')}></input>
                     </div>
                     
                     <span>Pledge with no reward  </span>
@@ -99,21 +104,20 @@ const ProjectPage = () => {
                 </div>
 
                 <div>
-                {isChecked && (
+                {isChecked === "radio1" && (
                     <div className='project-span-input'>
                         <div>Enter your pledge </div>
 
                         <div className='input'>
                             <div className='input-page'>
                                 <input className="user-input"
-                                id='field1'
+                                // id='field1'
+                                id="field2"
                                 type='text' 
                                 onChange={handleChange}
                                 value={textForm.field1}
-                                name="field1"
-                                
-                                ></input>
-
+                                name="field1">
+                                </input>
                             </div>
                             
                             
@@ -123,10 +127,8 @@ const ProjectPage = () => {
                             
                         </div>
                     </div>
-                    
                     )
-                }
-                
+                }   
             </div>
             </div>
   
@@ -141,7 +143,12 @@ const ProjectPage = () => {
                         <div className='check'>
 
                             <div className='radio-btn'>
-                                <input type='radio'  checked={isChecked} onClick={handleCheck}></input>
+                                <input type='radio'
+                                id='radio2'
+                                name='check'
+                                value='radio2'  
+                                checked={isChecked === "radio2"} 
+                                onChange={() => toggleCheck('radio2')}></input>
                                 <div>Bamboo Stand</div>
                             </div> 
                 
@@ -159,7 +166,7 @@ const ProjectPage = () => {
 
 
                 <div>
-                    {isChecked && (
+                    {isChecked === "radio2" && (
                         <div className='project-span-input'>
                             <div>Enter your pledge</div>
 

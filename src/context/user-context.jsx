@@ -17,7 +17,7 @@ export const UserContext = createContext({
 
 export const UserProvider = ({children}) => {
     const [currentReward, setCurrentReward] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(null);
     const [thankyou, setThankyou] = useState(false);
     const [textForm, setTextForm] = useState({
         field1: '',
@@ -77,10 +77,9 @@ export const UserProvider = ({children}) => {
         setTextForm('');
     }
 
-    const toggleCheck = () => {
-        setIsChecked((prevChecked) => !prevChecked);
+    const toggleCheck = (value) => {
+        setIsChecked(value);
     }
-
     const openPopup = () => {
         setCurrentReward(true);
     };
