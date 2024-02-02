@@ -109,7 +109,6 @@ export const UserProvider = ({children}) => {
         openThankyou,
         closeThankyou,
         thankyou,
-   
         textForm,
         setTextForm,
         formError,

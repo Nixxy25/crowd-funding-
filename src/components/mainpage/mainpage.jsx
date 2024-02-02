@@ -26,9 +26,7 @@ const MainPage = () => {
     </div>
 
     <div className='main-container'>
-        <div className='first-main-container'>
-
-          
+        <div className='first-main-container'>  
             <div className='main-context'>
            <div className='main-text1'>Mastercraft Bamboo Monitor Riser</div>
            <div className='main-text2'>A beautifully handcrafted monitor stand to reduce neck and eye strain.</div>
