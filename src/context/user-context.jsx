@@ -1,4 +1,5 @@
 import  { useState, createContext } from "react";
+import ProjectPage from "../components/projectpage/projectpage";
 
 export const UserContext = createContext({
    loading: false,
@@ -17,7 +18,7 @@ export const UserContext = createContext({
 
 export const UserProvider = ({children}) => {
     const [currentReward, setCurrentReward] = useState(false);
-    const [isChecked, setIsChecked] = useState(null);
+    // const [isChecked, setIsChecked] = useState(new Array(projectsPage.length).fill(false));
     const [thankyou, setThankyou] = useState(false);
     const [textForm, setTextForm] = useState({
         field1: '',
@@ -77,9 +78,9 @@ export const UserProvider = ({children}) => {
         setTextForm('');
     }
 
-    const toggleCheck = (value) => {
-        setIsChecked(value);
-    }
+    // const toggleCheck = () => {
+    //     setIsChecked(!isChecked);
+    // }
     const openPopup = () => {
         setCurrentReward(true);
     };
@@ -104,8 +105,7 @@ export const UserProvider = ({children}) => {
         currentReward,
         closePopup,
         openPopup,
-        isChecked,
-        toggleCheck, 
+        
         openThankyou,
         closeThankyou,
         thankyou,

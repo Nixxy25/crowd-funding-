@@ -4,7 +4,7 @@ import './projectpage.css';
 
 const ProjectPage = () => {
     const {
-        currentReward, isChecked, 
+        currentReward, 
         toggleCheck, closePopup, 
         openThankyou,updateText,
        count,
@@ -23,7 +23,7 @@ const ProjectPage = () => {
         
     } = useContext(UserContext);
     
-   
+    const [isChecked, setIsChecked] = useState(new Array(projectsPage.length).fill(false));
     const displayedText = '25';
 
     const handleButtonClick = () => {     
@@ -95,8 +95,11 @@ const ProjectPage = () => {
         closePopup();
     }
 
-    const handleCheck = () => {
-        toggleCheck();
+    const handleCheck = (position) => {
+        const updateIsChecked = isChecked.map((item, index) =>
+        index === position ? item : item);
+
+        setIsChecked(updateIsChecked);
     }
 
     return (
@@ -109,15 +112,16 @@ const ProjectPage = () => {
                                 {
                                     projectsPage.map((project, index) => {
                                         return(
-                                            <div key={index} id={project.id}>
+                                            <div key={index}>
                                                 <div>
                                                     <div>
                                                         <input 
                                                         type='radio'
-                                                        value="1"
-                                                        name='check'
-                                                        checked={isChecked}
-                                                        onChange={handleCheck}
+                                                        id={`radio-check-${index}`}
+                                                        name={project.title}
+                                                        value={project.title}
+                                                        checked={isChecked[index]}
+                                                        onClick={() => handleCheck(index)}
                                                         ></input>
                                                         <div>{project.name}</div>
                                                         <div>{project.title}</div>
@@ -129,7 +133,7 @@ const ProjectPage = () => {
                                                 <div>
                                                     {project.details}
                                                 </div>
-                                                {isChecked && (
+                                                {isChecked[index] && (
                                                         <div>
                                                             <div>Enter your pledge</div>
     
