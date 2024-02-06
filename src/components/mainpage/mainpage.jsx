@@ -100,7 +100,7 @@ const MainPage = () => {
                     </div>
 
                     <div className='details-price'>
-                        <div className='price'>{count} <span>left</span></div>
+                        <div className='price'>{count[1]} <span>left</span></div>
                         <button onClick={handleOpen} type='button'>Select Reward</button>
                     </div>
 
@@ -119,7 +119,7 @@ const MainPage = () => {
                     </div>
 
                     <div className='details-price'>
-                        <div className='price'>{count} <span>left</span></div>
+                        <div className='price'>{count[2]} <span>left</span></div>
                         <button onClick={handleOpen} type='button'>Select Reward</button>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ const MainPage = () => {
                     </div>
 
                     <div className='details-price'>
-                        <div className='price'>{count} <span>left</span></div>
+                        <div className='price'>{count[3]} <span>left</span></div>
                         <button onClick={handleOpen} type='button'>Select Reward</button>
                     </div>
 

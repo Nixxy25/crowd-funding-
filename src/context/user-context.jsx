@@ -18,16 +18,13 @@ export const UserContext = createContext({
 
 export const UserProvider = ({children}) => {
     const [currentReward, setCurrentReward] = useState(false);
-    // const [isChecked, setIsChecked] = useState(new Array(projectsPage.length).fill(false));
+    
     const [thankyou, setThankyou] = useState(false);
-    const [textForm, setTextForm] = useState({
-        field1: '',
-        field2: '',
-        field3:'',
-        field4:'',
-    });
+    const [textForm, setTextForm] = useState("");
     const [formError, setFormError] = useState("");
-    const [count, setCount] = useState(64);
+    const [count, setCount] = useState([
+        0,60,70,80
+    ]);
     const [loading, setLoading] = useState(false);
     const [bookmark, setBookmark] = useState(false);
     const [fundsNumber, setFundsNumber] = useState(89914);
@@ -105,7 +102,7 @@ export const UserProvider = ({children}) => {
         currentReward,
         closePopup,
         openPopup,
-        
+    
         openThankyou,
         closeThankyou,
         thankyou,
@@ -113,6 +110,7 @@ export const UserProvider = ({children}) => {
         setTextForm,
         formError,
         count,
+        setCount,
         updateCount,
         loading,
         updateLoading,

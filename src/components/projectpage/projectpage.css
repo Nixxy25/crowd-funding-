@@ -49,7 +49,7 @@
     gap: 20px;
 }
 .project-container{
-    border: solid 1px #7e797952;
+    border: solid 1px #d61c1c52;
     border-radius: 8px;
 }
 .project-check-one{
@@ -66,7 +66,13 @@
    
 }
 .project-check-container{
-    padding: 25px 10px;
+    padding: 15px 10px;
+   
+}
+.projects{
+    border: 1px solid rgba(202, 216, 202, 0.808);
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 .check{
     display: flex;
@@ -76,19 +82,19 @@
 .radio-btn{
     display: flex;
     align-items: center;
-    gap: 8px;
 }
 .radio-btn input[type="radio"]{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     border: 1px solid #7e797952;
     background-color: #fff;
     outline: none;
     transition: border-color 0.3s ease;
+    
 }
       
 .radio-btn input[type="radio"]:checked {
@@ -99,7 +105,7 @@
 
 .project-span-input{
     display: flex;
-    border-top: 1px solid rgb(240, 241, 237);
+    border-top: 1px solid rgba(6, 7, 2, 0.384);
     justify-content: space-between;
     margin-top: 10px;
     align-items: center;
@@ -127,7 +133,7 @@
     display: flex;
     border-radius: 15px;
     height: 30px;
-    width: 70px;
+    width: 65px;
     outline: none;
 }
 
@@ -140,10 +146,13 @@
     color: #fff;
 }
 
+.reds{
+    border: 1px solid #3cb4ab;
+}
 .red{
-    border: 1px solid red;
+    border: 1px solid red
+}
+.white{
+    border: 1px solid orange
 }
 
-.white{
-    border: none;
-}
