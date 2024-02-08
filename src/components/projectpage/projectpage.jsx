@@ -85,6 +85,7 @@ const ProjectPage = () => {
         })
     }
 
+
    
 
     const handleButtonClick = (index) => {  
@@ -101,19 +102,21 @@ const ProjectPage = () => {
             })
             toggleCheck();
             clearText();
-        } else if(index === 1 && formFieldValue > 75){
+            clearCheck();
+        } else if(index === 1 && formFieldValue > 25){
             setFundsNumber(prevState => prevState + parseInt(formField[index].formFieldValue))
             updateBackers();
             openThankyou();
+           
             setCount((prevState) => {
                 const updatedCounts = [...prevState];
                 updatedCounts[index] = Math.max(0, prevState[index] - 1)
                 return updatedCounts;
             })
-            
+            clearCheck();
             toggleCheck();
             clearText();
-        }else if(index === 2 && formFieldValue > 200){
+        }else if(index === 2 && formFieldValue > 75){
             setFundsNumber(prevState => prevState + parseInt(formField[index].formFieldValue))
             updateBackers();
             openThankyou();
@@ -122,6 +125,7 @@ const ProjectPage = () => {
                 updatedCounts[index] = Math.max(0, prevState[index] - 1)
                 return updatedCounts;
             })
+          
             // updateCount();
             toggleCheck();
             clearText();
@@ -156,6 +160,7 @@ const ProjectPage = () => {
         setIsChecked(updateIsChecked);
     }
 
+   
     return (
         <div>
             {
@@ -180,8 +185,9 @@ const ProjectPage = () => {
                                             <div className='project-check-container' key={index}>
                                                 <div className='project-check'>
                                                     <div className='check'>
-                                                        
+
                                                         <div className='radio-btn'>
+
                                                         <input 
                                                         type='radio'
                                                         id={`radio-check-${index}`}
@@ -190,10 +196,14 @@ const ProjectPage = () => {
                                                         checked={isChecked[index]}
                                                         onChange={() => handleCheck(index)}
                                                         ></input>
+
                                                         </div>
-                                                        <div>{project.name}</div>
+                                                        <div className='mobile-page'>
+                                                            <div>{project.name}</div>
                                                         
-                                                        <div>{project.title}</div>
+                                                            <div>{project.title}</div>
+                                                        </div>
+                                                        
                                                     </div>
 
                                                     <div className='project-count'>{project.count}</div>

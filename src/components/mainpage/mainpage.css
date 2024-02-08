@@ -13,10 +13,11 @@
     overflow: auto;
 }
 .main-container{
-    background-color: #ffff;
+    background-color: #fff;
+    border: 2px solid #fcfcfce7;
     position: absolute;
     width: 50%;
-    top: 33%;
+    top: 25%;
     border-radius: 10px;
     padding: 25px;
     display: flex;
@@ -36,17 +37,17 @@
     height: 100%;
     width: 80%;
     border-radius: 10px;
-      background-color: #3cb4ab;
+    background-color: #3cb4ab;
     line-height: 20px;
   }
 .main-logo{
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
-    top: 33%;
+    top: 21%;
 }
 .main-context{
     display: flex;
@@ -193,15 +194,14 @@
     
 }
 .main-info-numbers-right{
-    border-right:  1px solid #28ca28;
-    border-left: 1px solid #28ca28;
+   
     padding: 0px 17px;
 }
 @media (max-width: 767px) {
     .main-container{
         position: absolute;
+        top: 33%;
         width: 80%;
-        top: 48%;
         padding: 20px;
     }
     .main-context{
@@ -215,8 +215,8 @@
         font-size: 17px;
     }
     .main-logo{
-        top: 44%;
-        z-index: 1;
+        top: 29%;
+        z-index: 0;
     }
     .btn2 button{
         display: none;
@@ -224,6 +224,7 @@
     .main-button{
         display: flex;
         justify-content: center;
+     
     }
     .main-info{
         display: flex;
@@ -250,6 +251,6 @@
         gap: 10px;
     }
     .details-price button{
-        width: 65%;
+        
     }
 }

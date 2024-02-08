@@ -34,7 +34,7 @@ const MainPage = () => {
 
 
         <div className='main-button'>
-        <div ><button className='btn1' type='button' >Back this project</button></div>
+        <div className='btn1'><button  type='button' >Back this project</button></div>
         
         <div className='btn2'>
             <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle className={`${bookmark ? "svg-btn-true" : "svg-btn-false"}`} onClick={handleBookmark} fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#fff" d="M23 19v18l5-5.058L33 37V19z"/></g></svg> 

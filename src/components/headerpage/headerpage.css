@@ -1,13 +1,36 @@
 .crowdfund-nav{
+    position: relative;
     color: #ffff;
     display: flex;
-    margin: 0;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
     font-size: 16px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
+}
+.crowdfund-container{
+    position: relative;
+    height: 300px;
+}
+
+.desktop-view{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.crowdfund-container::before {
+    background-image: url("src/assets/image-hero-desktop.jpg");
+    content: "";
+    position: absolute;
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.89;
+    
 }
 
 .crowdfund{
@@ -20,7 +43,34 @@
     gap: 30px;
 
 }
+.mobile{
+   position: absolute;
+   left: 10%;
+   width: 80%;
+   padding: 20px;
+   background-color: rgb(255, 255, 255);
+   color: black;
+   margin-top: 15px;
+   border-radius: 8px;
+   z-index: 1;
+}
+.mobile p{
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+}
 
-@media (max-width: 767px) {
-    
+
+
+@media (max-width: 768px) {
+    .crowdfund-container::before{
+        background-image: url("src/assets/image-hero-mobile.jpg");
+    }
+    .desktop-view{
+        display: none;
+    }
+    .crowdfund-nav{
+        padding: 30px;
+    }
+   
 }

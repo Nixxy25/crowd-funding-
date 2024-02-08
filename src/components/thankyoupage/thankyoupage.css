@@ -34,3 +34,11 @@
     background-color: #3cb4ab;
     color: #fff;
 }
+@media (max-width: 767px){
+    .thankyou-page{
+        width: 67%;
+    }
+    .thankyou-button button{
+        padding: 10px 20px;
+    }
+}

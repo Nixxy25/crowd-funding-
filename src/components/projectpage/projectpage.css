@@ -105,7 +105,7 @@
 
 .project-span-input{
     display: flex;
-    border-top: 1px solid rgba(6, 7, 2, 0.384);
+    border-top: 1px solid rgb(211, 209, 209);
     justify-content: space-between;
     margin-top: 10px;
     align-items: center;
@@ -132,16 +132,18 @@
 .input-page input{
     display: flex;
     border-radius: 15px;
-    height: 30px;
-    width: 65px;
+    height: 35px;
+    width: 70px;
     outline: none;
+    border: 1px solid black;
 }
 
 .input-button button{
     border-radius: 15px;
-    height: 30px;
-    width: 70px;
+    height: 35px;
+    width: 90px;
     border: none;
+    
     background-color: #3cb4ab;
     color: #fff;
 }
@@ -152,7 +154,37 @@
 .red{
     border: 1px solid red
 }
-.white{
+/* .white{
     border: 1px solid orange
-}
+} */
 
+@media (max-width: 767px){
+    .project-check{
+       
+
+    }
+    .mobile-page{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .project-span-input{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-around;
+        font-size: 15px;
+    }
+    .input-page input{
+        width: 60px;
+        height: 28px;
+    }
+    .input-button button{
+        width: 60px;
+        height: 28px;
+        font-size: 10px;
+    }
+    .pop-up{
+        width: 67%;
+    }
+}
