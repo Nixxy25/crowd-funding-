@@ -29,6 +29,8 @@ const HeaderPage = () => {
                         }
                     </button>
 
+                    
+
                     <div className={`mobile ${isOpen ? "block" : "hidden"}`}>
                         <p>About</p>
                         <p>Discover</p>

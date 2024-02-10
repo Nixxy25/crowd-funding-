@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .pop-up-open{
@@ -26,7 +27,28 @@
     display: none;
 }
 
-.pop-up{
+.spin{
+    animation: spin 2s linear infinite;
+    width: 23px;
+    fill: #3cb4ab;
+
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .input-button-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .pop-up{
     width: 50%;
     overflow-y: auto;
     max-height: 70%;
