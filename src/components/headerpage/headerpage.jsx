@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import {image1} from "../../assets/image-hero-desktop.jpg"
+import {image} from "../../assets/image-hero-mobile.jpg"
 import './headerpage.css';
 
 const HeaderPage = () => {
