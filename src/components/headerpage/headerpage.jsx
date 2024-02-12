@@ -14,6 +14,7 @@ const HeaderPage = () => {
 
         <div className='crowdfund-nav'>
             <div className='crowdfund'>crowdFund</div>
+            
                 <div className='desktop-view'>
                     <p>About</p>
                     <p>Discover</p>

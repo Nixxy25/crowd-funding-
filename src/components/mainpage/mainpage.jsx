@@ -29,6 +29,7 @@ const MainPage = () => {
         <div className='first-main-container'>  
             <div className='main-context'>
            <div className='main-text1'>Mastercraft Bamboo Monitor Riser</div>
+           
            <div className='main-text2'>A beautifully handcrafted monitor stand to reduce neck and eye strain.</div>
         </div>
 
@@ -37,7 +38,7 @@ const MainPage = () => {
         <div className='btn1'><button  type='button' >Back this project</button></div>
         
         <div className='btn2'>
-            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle className={`${bookmark ? "svg-btn-true" : "svg-btn-false"}`} onClick={handleBookmark} fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#fff" d="M23 19v18l5-5.058L33 37V19z"/></g></svg> 
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle className={`${bookmark ? "svg-btn-true" : "svg-btn-false"}`} onClick={handleBookmark} fill="#727473" cx="28" cy="28" r="28"/><path fill="#fff" d="M23 19v18l5-5.058L33 37V19z"/></g></svg> 
         <button className={`${bookmark ? "bookmark-true" : "bookmark-false"}`}  onClick={handleBookmark} type='button'>
             <span className='span-btn2'>{bookmarkedText}</span> 
         </button> </div>
@@ -48,17 +49,17 @@ const MainPage = () => {
        <div className='second-main-container'>
         <div className='main-info'>
             <div className='main-info-numbers'>
-                <div className='main-numbers'>{fundsNumber} </div>
+                <div className='main-numbers'>${fundsNumber} </div>
                 <span className='span-info'>of $100,000 backed</span>
             </div>
 
-            <div className='main-info-numbers-right'>
-                <div>{backers}</div>
+            <div className='main-info-numbers'>
+                <div className='main-numbers'>{backers}</div>
                 <span className='span-info'>total backers</span>
             </div>
 
             <div className='main-info-numbers'>
-                <div>56</div>
+                <div className='main-numbers'>56</div>
                 <span className='span-info'>days left</span>
             </div>
         </div>
@@ -90,7 +91,7 @@ const MainPage = () => {
             <div className='about-details-container'>
                 <div className='details-container'>
                     <div className='details'>
-                        <h3>Bamboo Stand</h3>
+                        <h3 className='details-name'>Bamboo Stand</h3>
                         <h3 className='pledge'>Pledge 25$ or more</h3>
                     </div>
 
@@ -109,7 +110,7 @@ const MainPage = () => {
                
                 <div className='details-container'>
                     <div className='details'>
-                        <h3>Black Edition Stand</h3>
+                        <h3 className='details-name'>Black Edition Stand</h3>
                         <h3 className='pledge'>Pledge 75$ or more</h3>
                     </div>
 
@@ -126,7 +127,7 @@ const MainPage = () => {
 
                 <div className='details-container'>       
                     <div className='details'>
-                        <h3>Mahogany Special Edition</h3>
+                        <h3 className='details-name'>Mahogany Special Edition</h3>
                         <h3 className='pledge'>Pledge 200$ or more</h3>
                     </div>
 
