@@ -21,7 +21,7 @@
 }
 
 .crowdfund-container::before {
-    background-image: url("src/assets/image-hero-desktop.jpg");
+    background-image: url("/src/assets/image-hero-desktop.jpg");
     content: "";
     position: absolute;
     background-size: cover;
@@ -64,7 +64,7 @@
 
 @media (max-width: 768px) {
     .crowdfund-container::before{
-        background-image: url("src/assets/image-hero-mobile.jpg");
+        background-image: url("/src/assets/image-hero-mobile.jpg");
     }
     .desktop-view{
         display: none;

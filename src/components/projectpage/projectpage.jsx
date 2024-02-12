@@ -155,7 +155,7 @@ const ProjectPage = () => {
                }, 4000);
             setFundsNumber(prevState => prevState + parseInt(formField[index].formFieldValue))
             updateBackers();
-           
+            openThankyou();
             setCount((prevState) => {
                 const updatedCounts = [...prevState];
                 updatedCounts[index] = Math.max(0, prevState[index] - 1)
@@ -163,7 +163,8 @@ const ProjectPage = () => {
             })
           
             // updateCount();
-            
+            clearField();
+            unCheck();
         }else if(index === 3 && formFieldValue > 200){
             setFundsNumber(prevState => prevState + parseInt(formField[index].formFieldValue))
             setIsLoading(true);

@@ -193,9 +193,7 @@
     border-radius: 7px;
     border: 1px solid #eeeaeaa4;
 }
-.main-info-numbers{
-    
-}
+
 .main-info-numbers-right{
    
     padding: 0px 17px;
@@ -236,10 +234,7 @@
         font-size: 28px;
         gap: 20px;
     }
-    .main-info-numbers{
-   
-      
-    }
+ 
     .span-info{
         font-size: 13px;
     }
@@ -253,7 +248,5 @@
         flex-direction: column;  
         gap: 10px;
     }
-    .details-price button{
-        
-    }
+    
 }

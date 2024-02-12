@@ -181,10 +181,7 @@
 } */
 
 @media (max-width: 767px){
-    .project-check{
-       
-
-    }
+  
     .mobile-page{
         display: flex;
         flex-direction: column;
