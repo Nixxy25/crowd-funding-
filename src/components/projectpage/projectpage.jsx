@@ -210,7 +210,7 @@ const ProjectPage = () => {
                             <div className='pop-up'>
                             <div className='project-heading-container'>
                                       <div className='project-heading'>
-                                          <div>Back this project</div>
+                                          <div className='project-heading-name'>Back this project</div>
                                           <div onClick={handleClose}>
                                               <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="blackr" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
                                           </div>
@@ -239,9 +239,9 @@ const ProjectPage = () => {
 
                                                         </div>
                                                         <div className='mobile-page'>
-                                                            <div>{project.name}</div>
+                                                            <div className='project-name'>{project.name}</div>
                                                         
-                                                            <div>{project.title}</div>
+                                                            <div className='project-title'>{project.title}</div>
                                                         </div>
                                                         
                                                     </div>
@@ -249,23 +249,23 @@ const ProjectPage = () => {
                                                     <div className='project-count'>{project.count}</div>
                                                 </div>
 
-                                                <div>
+                                                <div className='project-details'>
                                                     {project.details}
                                                 </div>
                                             </div>
                                                 {isChecked[index] && (
                                                         <div className='project-span-input'>
-                                                            <div>Enter your pledge</div>
+                                                            <div className='pledge'>Enter your pledge</div>
     
                                                         <div className='input'>
                                                             <div className='input-page'>
-                                                            <input className={`user-input ${formError? "red" : "black"}`}
-                                                            type='text'
-                                                            value={formField[index].formFieldValue}
-                                                        
-                                                            onChange={(event) => handleInputChange(index, event.target.value)}
-                                                            ></input>
-                                                        </div>
+                                                                <input className={`user-input ${formError ? "red" : "black"}`}
+                                                                type='text'
+                                                                value={formField[index].formFieldValue}
+                                                                placeholder='$'
+                                                                onChange={(event) => handleInputChange(index, event.target.value)}
+                                                                ></input>
+                                                            </div>
                             
                                                             <div className='input-button-container'>
                                                                 <div className='input-button'>

@@ -208,22 +208,28 @@
 .first-main-container{
     background-color: #ffff;
     
-    border: 1px solid #eeeaeaa4;
+    border: 1px solid #cecfce;
     border-radius: 7px;
+    margin: 15px;
+    padding: 10px;
 }
 .second-main-container{
     padding: 10px 0px;
     background-color: #fff;
-    border: 1px solid #eeeaeaa4;
+    border: 1px solid #cecfce;
     border-radius: 7px; 
     margin-bottom: 25px;
+    margin: 15px;
+    padding: 10px;
+    
 }
 .third-main-container{
  
     background-color: #fff;
-
+    margin: 15px;
+    padding: 20px 10px;
     border-radius: 7px;
-    border: 1px solid #eeeaeaa4;
+    border: 1px solid #cecfce;
 }
 .main-numbers{
     font-size: larger;
