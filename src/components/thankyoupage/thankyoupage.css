@@ -15,6 +15,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .thankyou-page{
     background-color: #fff;
@@ -34,7 +35,7 @@
     background-color: #3cb4ab;
     color: #fff;
 }
-@media (max-width: 767px){
+@media (max-width: 480px){
     .thankyou-page{
         width: 67%;
     }

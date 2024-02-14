@@ -63,7 +63,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .crowdfund-container::before{
         background-image: url("/src/assets/image-hero-mobile.jpg");
     }

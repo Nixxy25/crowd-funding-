@@ -215,7 +215,7 @@
     border: 1px solid orange
 } */
 
-@media (max-width: 767px){
+@media (max-width: 480px){
   
     .mobile-page{
         display: flex;

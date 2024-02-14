@@ -22,7 +22,7 @@
     border: 2px solid #fcfcfc;
     position: absolute;
     width: 60%;
-    top: 35%;
+    top: 30%;
     z-index: 0;
     border-radius: 10px;
     padding: 5px 25px;
@@ -54,7 +54,7 @@
     right: 0;
     display: flex;
     justify-content: center;
-    top: 30%;
+    top: 26%;
 }
 .main-context{
     display: flex;
@@ -261,7 +261,19 @@
    
     padding: 0px 17px;
 }
-@media (max-width: 1167px) {
+@media (max-width: 1024px){
+    .main-container{
+        position: absolute;
+        top: 19%;
+        width: 80%;
+        padding: 20px;
+    }
+    .main-logo{
+        top: 17%;
+      
+    }
+}
+@media (max-width: 480px) {
     .main-container{
         position: absolute;
         top: 33%;
@@ -346,3 +358,4 @@
     }
     
 }
+
