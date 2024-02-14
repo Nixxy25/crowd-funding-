@@ -273,10 +273,10 @@
       
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .main-container{
         position: absolute;
-        top: 28%;
+        top: 30%;
         width: 80%;
         padding: 20px;
     }
@@ -292,6 +292,7 @@
     }
     .main-logo{
         top: 25%;
+        
       
     }
     .main-text1{
@@ -347,9 +348,9 @@
         font-size: 13px;
     }
     .details-price button{
-       padding: 10px 15px;
-       font-size: 13px;
-       font-weight: 600;
+       
+       font-size: 10px;
+       
        width: 70%;
     }
     .main-info-numbers{
