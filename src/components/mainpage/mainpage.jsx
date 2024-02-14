@@ -58,7 +58,7 @@ const MainPage = () => {
                 <span className='span-info'>total backers</span>
             </div>
 
-            <div className='main-info-numbers'>
+            <div className='main-info-numbers-diff'>
                 <div className='main-numbers'>56</div>
                 <span className='span-info'>days left</span>
             </div>
