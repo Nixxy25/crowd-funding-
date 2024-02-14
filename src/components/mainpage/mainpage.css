@@ -235,17 +235,14 @@
     border-radius: 7px;
     
 }
-.main-info-numbers{
-    padding-bottom: 10px;
-    border-bottom: 1px solid #727473;
-}
+
 .main-info-numbers-diff .span-info{
     color: #727473;
     font-size: 13px;
     font-weight: 700;
 }
 .main-numbers{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 800;
 }
 .main-info-numbers .span-info{
@@ -335,6 +332,10 @@
        font-size: 13px;
        font-weight: 600;
        width: 70%;
+    }
+    .main-info-numbers{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #727473;
     }
     
 }
