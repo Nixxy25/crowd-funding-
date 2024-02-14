@@ -245,8 +245,8 @@
     font-weight: 700;
 }
 .main-numbers{
-    font-size: larger;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 800;
 }
 .main-info-numbers .span-info{
     color: #727473;
@@ -297,7 +297,7 @@
      
     }
     .main-text{
-        font-size: 12px;
+        font-size: 13px;
     }
     .main-info{
         display: flex;
@@ -321,18 +321,18 @@
         gap: 10px;
     }
     .details-name{
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 800;
     }
     .details .pledge{
-        font-size: 12px;
+        font-size: 13px;
     }
     .details-info{
-        font-size: 12px;
+        font-size: 13px;
     }
     .details-price button{
        padding: 10px 15px;
-       font-size: 12px;
+       font-size: 13px;
        font-weight: 600;
        width: 70%;
     }
