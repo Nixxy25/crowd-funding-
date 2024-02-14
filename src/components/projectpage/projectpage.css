@@ -16,9 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: cursive;
-    
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .pop-up-open{
@@ -203,13 +201,12 @@
     height: 35px;
     width: 90px;
     border: none;
-    
     background-color: #3cb4ab;
     color: #fff;
 }
 
 .reds{
-    border: 1px solid #3cb4ab;
+    border: 2px solid #3cb4ab;
 }
 .red{
     border: 1px solid red;
@@ -225,6 +222,10 @@
         flex-direction: column;
         font-size: 12px;
     }
+    .project-heading-text{
+        font-size: 13px;
+        font-weight: 500;
+    }
     .project-span-input{
         display: flex;
         flex-direction: column;
@@ -233,15 +234,16 @@
         font-size: 15px;
     }
     .input-page input{
-        width: 60px;
-        height: 28px;
+        border-radius: 18px;
     }
     .input-button button{
-        width: 60px;
-        height: 28px;
-        font-size: 10px;
+        font-size: 13px;
+        border-radius: 18px;
     }
     .pop-up{
-        width: 67%;
+        width: 80%;
+    }
+    .mobile-page{
+        gap: 3px;
     }
 }
