@@ -13,13 +13,14 @@
 .no-scroll{
     overflow: auto;
 }.main{
-    
+   
     display: flex;
     justify-content: center;
 }
 .main-container{
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border: 2px solid #fcfcfc;
+    background-color: #28ca28;
     position: absolute;
     width: 60%;
     top: 23%;
@@ -279,6 +280,7 @@
         top: 30%;
         width: 80%;
         padding: 20px;
+        background-color: yellow;
     }
     .main-context{
         text-align: center;
