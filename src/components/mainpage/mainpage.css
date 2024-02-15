@@ -18,9 +18,9 @@
     justify-content: center;
 }
 .main-container{
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
     border: 2px solid #fcfcfc;
-    background-color: #28ca28;
+   
     position: absolute;
     width: 80%;
     top: 23%;
@@ -269,7 +269,7 @@
         padding: 20px;
     }
     .main-logo{
-        top: 8%;
+        top: 7%;
       
     }
 }
@@ -291,7 +291,6 @@
         top: 30%;
         width: 80%;
         padding: 20px;
-        background-color: yellow;
     }
     .main-context{
         text-align: center;
@@ -318,12 +317,17 @@
         font-weight: 500;
      
     }
+    .btn1{
+        font-size: 11px;
+        padding: 13px;
+    }
     .btn2 button{
         display: none;
     }
     .main-button{
         display: flex;
         justify-content: center;
+        
      
     }
     .main-text{
