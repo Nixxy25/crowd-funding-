@@ -22,8 +22,8 @@
     border: 2px solid #fcfcfc;
     background-color: #28ca28;
     position: absolute;
-    width: 60%;
-    top: 23%;
+    width: 80%;
+    top: 3%;
     z-index: 0;
     border-radius: 10px;
     padding: 5px 25px;
@@ -262,7 +262,7 @@
    
     padding: 0px 17px;
 }
-@media (max-width: 1024px){
+/* @media (max-width: 1024px){
     .main-container{
         position: absolute;
         top: 19%;
@@ -273,7 +273,7 @@
         top: 17%;
       
     }
-}
+} */
 @media (max-width: 767px) {
     .main-container{
         position: absolute;
