@@ -23,7 +23,7 @@
     background-color: #28ca28;
     position: absolute;
     width: 80%;
-    top: 13%;
+    top: 23%;
     z-index: 0;
     border-radius: 10px;
     padding: 5px 25px;
@@ -262,18 +262,29 @@
    
     padding: 0px 17px;
 }
-/* @media (max-width: 1024px){
+@media (max-width: 1024px){
+    .main-container{
+        position: absolute;
+        top: 13%;
+        padding: 20px;
+    }
+    .main-logo{
+        top: 10%;
+      
+    }
+}
+
+@media (max-width: 840px){
     .main-container{
         position: absolute;
         top: 19%;
-        width: 80%;
         padding: 20px;
     }
     .main-logo{
         top: 17%;
       
     }
-} */
+}
 @media (max-width: 767px) {
     .main-container{
         position: absolute;
