@@ -265,11 +265,11 @@
 @media (max-width: 1024px){
     .main-container{
         position: absolute;
-        top: 13%;
+        top: 10%;
         padding: 20px;
     }
     .main-logo{
-        top: 10%;
+        top: 8%;
       
     }
 }
