@@ -22,7 +22,7 @@
     border: 2px solid #fcfcfc;
    
     position: absolute;
-    width: 80%;
+    width: 60%;
     top: 23%;
     z-index: 0;
     border-radius: 10px;
@@ -269,16 +269,17 @@
         padding: 20px;
     }
     .main-logo{
-        top: 7%;
+        top: 8%;
       
     }
 }
 
-@media (max-width: 840px){
+@media (max-width: 900px){
     .main-container{
         position: absolute;
         top: 19%;
         padding: 20px;
+        width: 80%;
     }
     .main-logo{
         top: 17%;
